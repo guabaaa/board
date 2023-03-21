@@ -1,0 +1,11 @@
+.header-wrap {
+    width: 100%;
+    height: 250px;
+    line-height: 250px;
+}
+
+.logo-wrap {
+    width: 80%;
+    height: 150px;
+    vertical-align: middle;
+}
