@@ -9,7 +9,6 @@ const Board = () => {
     return (
         <div>
             <Header />
-            <MultiSelect />
             <Routes>
                 <Route path="/" element={<PostAll />} />
                 <Route path="/post/:id" element={<PostDetail />} />

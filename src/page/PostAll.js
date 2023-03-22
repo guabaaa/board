@@ -1,6 +1,7 @@
 import { async } from 'q';
 import React, { useEffect, useState } from 'react'
 import Card from '../component/board/Card';
+import MultiSelect from '../component/board/MultiSelect';
 
 const PostAll = () => {
     const [PostList, setPostList] = useState([]);
@@ -13,14 +14,20 @@ const PostAll = () => {
     useEffect(() => {
         getPosts();
     }, []);
+
     return (
-        <div className='card-wrap'>
-            <div className='cardall-wrap'>
-                {PostList.map((menu) => (
-                    <Card item={menu} />
-                ))}
+        <div>
+            <MultiSelect />
+            <div className='card-wrap'>
+
+                <div className='cardall-wrap'>
+                    {PostList.map((menu) => (
+                        <Card item={menu} />
+                    ))}
+                </div>
             </div>
         </div>
+
 
     )
 }
