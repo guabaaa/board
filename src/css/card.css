@@ -14,9 +14,21 @@
     border-radius: 4px;
     padding: 10px;
     margin: 30px;
+    cursor: pointer;
 }
 
-.img-line {
+.card-line:hover {
+    width: 400px;
+    height: 550px;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 30px;
+    cursor: pointer;
+    background-color: rgba(253, 253, 253, 0.13);
+}
+
+.card-line>.img-line {
     width: 330px;
     height: 350px;
     line-height: 350px;
