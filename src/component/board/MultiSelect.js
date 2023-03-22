@@ -7,7 +7,7 @@ const MultiSelect = () => {
             <div className='select' id='first-sel'>
                 <select>
                     <option>대분류</option>
-                    <option>가입한날짜순</option>
+                    <option>가입날짜순</option>
                     <option>가나다순</option>
                 </select>
             </div>
