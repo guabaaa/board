@@ -1,0 +1,13 @@
+.detail-wrap {
+    width: 100%;
+    border-top: 2px solid grey;
+    margin: 0 auto;
+}
+
+.detail-line {
+    margin: 0 auto;
+    width: 1000px;
+    border: 1.5px solid grey;
+    border-radius: 4px;
+    padding: 30px;
+}

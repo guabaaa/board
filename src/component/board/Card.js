@@ -11,6 +11,7 @@ const Card = ({ item }) => {
             <div className='card-content'>
                 <p className='join-date'>가입날짜 : {item?.date}</p>
                 <p className='join-content'>가입내용 : {item?.content} </p>
+                <p className='resign'>{item?.resign == true ? "재계약" : " - "}</p>
             </div>
         </div>
     )

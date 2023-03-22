@@ -15,10 +15,13 @@ const PostAll = () => {
     }, []);
     return (
         <div className='card-wrap'>
-            {PostList.map((menu) => (
-                <Card item={menu} />
-            ))}
+            <div className='cardall-wrap'>
+                {PostList.map((menu) => (
+                    <Card item={menu} />
+                ))}
+            </div>
         </div>
+
     )
 }
 

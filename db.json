@@ -5,70 +5,80 @@
             "img": "https://i0.wp.com/g9inside.com/wp-content/uploads/2021/11/260287495_6549392518466018_5517720792736146407_n.jpg?fit=500%2C374&ssl=1",
             "title": "한국전력공사",
             "date": "2018-03-23",
-            "content": "경영/재무관리"
+            "content": "경영/재무관리",
+            "resign": true
         },
         {
             "id": 1,
             "img": "https://i.namu.wiki/i/4-npQLtfzfwkLIYT8Lk9NPGfwV5acahbakQ8SelG18fw12h_ecJ_MxYUB2wtXJbYj3V-cFE6xw1bFRWeYk5f1qyVJGsm9HsPo255DlSRdfxY6G0G3xGkml0E6JpCcl1Scjo6fDJAYg3Wh13jW9VPYw.svg",
             "title": "삼성물산",
             "date": "2020-05-14",
-            "content": "CCTV 관제센터"
+            "content": "CCTV 관제센터",
+            "resign": true
         },
         {
             "id": 2,
             "img": "https://t1.daumcdn.net/cfile/tistory/227CE43758E7D95511",
             "title": "삼성전자",
             "date": "2019-11-05",
-            "content": "Smart City"
+            "content": "Smart City",
+            "resign": true
         },
         {
             "id": 3,
             "img": "https://t1.daumcdn.net/cfile/tistory/9997644C5AF2495809",
             "title": "현대자동차",
             "date": "2018-10-20",
-            "content": "시정상황판"
+            "content": "시정상황판",
+            "resign": true
         },
         {
             "id": 4,
             "img": "https://upload.wikimedia.org/wikipedia/commons/8/8e/%ED%95%9C%EA%B5%AD%EB%8F%84%EB%A1%9C%EA%B3%B5%EC%82%ACCI.png",
             "title": "한국도로공사",
             "date": "2019-09-26",
-            "content": "교통/환경"
+            "content": "교통/환경",
+            "resign": true
         },
         {
             "id": 5,
             "img": "https://www.airport.kr/co_file/ko/file03/IIAC_jpg01.jpg",
             "title": "인천공항",
             "date": "2019-10-20",
-            "content": "교통/환경"
+            "content": "교통/환경",
+            "resign": true
         },
         {
             "id": 6,
             "img": "https://www.kyobo.com/dgt/web/mobile/common/img/abt/ci_signature01.png",
             "title": "교보생명",
             "date": "2021-09-23",
-            "content": "통계/분석관리"
+            "content": "통계/분석관리",
+            "resign": true
         },
         {
             "id": 7,
             "img": "https://cdn.pressm.kr/news/photo/202104/42868_32785_2230.png",
             "title": "국민연금",
             "date": "2022-04-29",
-            "content": "통계/분석관리"
+            "content": "통계/분석관리",
+            "resign": true
         },
         {
             "id": 8,
             "img": "https://blog.kakaocdn.net/dn/cy7rU9/btqwASK0ZXF/hukhjXsDQ3NKfEzvlyJggk/img.jpg",
             "title": "성남시청",
             "date": "2021-10-26",
-            "content": "재난/안전"
+            "content": "재난/안전",
+            "resign": true
         },
         {
             "id": 9,
             "img": "data:image/png;base64,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",
             "title": "평창올림픽",
             "date": "2022-11-09",
-            "content": "관리지표분석"
+            "content": "관리지표분석",
+            "resign": false
         }
     ]
 }

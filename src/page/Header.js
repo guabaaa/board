@@ -1,6 +1,7 @@
 import React from 'react'
 import Logo from '../component/navigation/Logo'
 import Search from '../component/navigation/Search'
+import MediaQuery from 'react-responsive'
 
 const Header = () => {
     return (
