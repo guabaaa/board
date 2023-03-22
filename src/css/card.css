@@ -16,9 +16,15 @@
     margin: 30px;
 }
 
-.card-line img {
+.img-line {
     width: 330px;
-    height: 400px;
+    height: 350px;
+    line-height: 350px;
+    margin: 0 auto;
+}
+
+.img-line img {
+    vertical-align: middle;
 }
 
 .card-title {

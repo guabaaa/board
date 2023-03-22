@@ -1,14 +1,14 @@
 import React from 'react'
 import Header from './component/navigation/Header'
 import MultiSelect from './component/board/MultiSelect'
-import Card from './component/board/Card'
+import PostAll from './page/PostAll'
 
 const Board = () => {
     return (
         <div>
             <Header />
             <MultiSelect />
-            <Card />
+            <PostAll />
         </div>
     )
 }
