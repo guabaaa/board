@@ -1,5 +1,26 @@
 .select-wrap {
-    width: 30%;
+    width: 100%;
     height: 100px;
-    float: right;
+    display: flex;
+    position: relative;
+}
+
+.select-wrap .select {
+    position: absolute;
+    margin: 10px;
+}
+
+.select-wrap select {
+    width: 100px;
+    height: 25px;
+    border: 1.5px solid gray;
+    border-radius: 3px;
+}
+
+#first-sel {
+    right: 220px;
+}
+
+#second-sel {
+    right: 100px;
 }
