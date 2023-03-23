@@ -1,6 +1,5 @@
 import React from 'react'
 import { BiSearchAlt } from 'react-icons/bi'
-import logo from '../../img/clamos.png'
 import '../../css/header.css'
 
 const Search = () => {
