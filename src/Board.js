@@ -1,5 +1,4 @@
 import React from 'react'
-import MultiSelect from './component/board/MultiSelect'
 import Header from './page/Header'
 import PostAll from './page/PostAll'
 import { Routes, Route } from "react-router-dom"

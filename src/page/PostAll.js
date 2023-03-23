@@ -2,6 +2,7 @@ import { async } from 'q';
 import React, { useEffect, useState } from 'react'
 import Card from '../component/board/Card';
 import MultiSelect from '../component/board/MultiSelect';
+import Search from '../component/navigation/Search';
 
 const PostAll = () => {
     const [PostList, setPostList] = useState([]);
@@ -17,6 +18,7 @@ const PostAll = () => {
 
     return (
         <div>
+            <Search />
             <MultiSelect />
             <div className='card-wrap'>
 

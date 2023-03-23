@@ -18,12 +18,9 @@
 }
 
 .search-wrap {
-    width: 250px;
-    height: 250px;
-    line-height: 250px;
-    display: flex;
-    position: absolute;
-    right: 110px;
+    width: 400px;
+    height: 50px;
+    margin: 0 auto;
 }
 
 .search-wrap .search-box {
@@ -32,7 +29,7 @@
 }
 
 .search-box {
-    width: 250px;
+    width: 400px;
     height: 30px;
     border: 1.5px solid gray;
     border-radius: 4px;
@@ -40,7 +37,7 @@
 }
 
 .search-box input {
-    width: 220px;
+    width: 370px;
     height: 30px;
     border: none;
 }
