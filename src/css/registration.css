@@ -1,0 +1,47 @@
+.regi-wrap {
+    width: 650px;
+    margin: 0 auto;
+    border: 1.5px solid grey;
+    margin-top: 100px;
+    border-radius: 4px;
+    padding: 30px;
+}
+
+.regi-content {
+    display: flex;
+    height: 35px;
+    line-height: 35px;
+    padding: 10px;
+}
+
+.regi-content span {
+    width: 100px;
+}
+
+.regi-content input {
+    vertical-align: middle;
+    width: 500px;
+    height: 30px;
+    margin-left: 20px;
+}
+
+.regi-content select {
+    vertical-align: middle;
+    width: 505px;
+    height: 33px;
+    margin-left: 20px;
+}
+
+.regi-btn-wrap {
+    width: 650px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.regi-btn-wrap button {
+    width: 150px;
+    height: 35px;
+    border: 1.5px solid grey;
+
+}
