@@ -5,6 +5,7 @@ import Pagination from '../component/board/Pagination';
 import Search from '../component/board/Search';
 import Regibtn from '../component/navigation/Regibtn';
 
+
 const PostAll = () => {
     const [PostList, setPostList] = useState([]);
     /** 현재 페이지 번호 */
@@ -14,8 +15,6 @@ const PostAll = () => {
     /** 첫 게시물 위치 */
     const offset = (page - 1) * limit;
 
-
-
     /** API 호출(데이터) */
     const getPosts = async () => {
         let url = "http://localhost:5000/card";
@@ -23,14 +22,26 @@ const PostAll = () => {
         let data = await response.json();
         setPostList(data);
     };
+
     useEffect(() => {
         getPosts();
     }, []);
 
+    const [search, setSearch] = useState("");
+    const handleChange = (e) => {
+        console.log(e.target.value)
+        /** input value 값에 저장된 검색어 가져오기 */
+        e.preventDefault();
+        setSearch(e.target.value);
+    }
+
+
 
     return (
         <div>
-            <Search />
+            <Search
+                onChange={handleChange}
+            />
             <div className='card-wrap'>
                 <label className='card-limit-sel'>
                     <select

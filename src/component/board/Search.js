@@ -1,30 +1,24 @@
 import React, { useState } from 'react'
 import { BiSearchAlt } from 'react-icons/bi'
-import { useSearchParams } from 'react-router-dom';
 import '../../css/header.css'
+import SearchDetail from '../../page/SearchDetail';
 
 
-const Search = ({ searchQuery, setSearchQuery, placeholder, field }) => {
-    const [query] = useSearchParams();
-    const [keyword, setKeyword] = useState(query.get(field) || "");
-    /**Enter key 실행 시에 search event 발생 */
-    const onSearch = (event) => {
-        if (event.key === "Enter") {
-            setSearchQuery({ ...searchQuery, page: 1, [field]: event.target.value });
-        }
-    };
+
+const Search = () => {
+
+
     return (
         <div>
             <div className='search-wrap'>
-                <div className='search-box'>
+                <div className={'search-box'}>
                     <input
-                        className='search-bar'
-                        type='text'
-                        placeholder={placeholder}
-                        onKeyPress={onSearch}
-                        onChange={(event) => setKeyword(event.target.value)}
-                        value={keyword} />
-                    <BiSearchAlt className='search-icon' width={30} height={30} />
+                        className={'search-bar'}
+                        type={'text'}
+                        placeholder='검색어를 입력하세요'
+                    />
+                    <BiSearchAlt className='search-icon' width={30} height={30} type={'submit'}
+                    />
                 </div>
             </div>
         </div>

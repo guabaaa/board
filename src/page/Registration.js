@@ -1,7 +1,13 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import '../css/registration.css'
 
 const Registration = () => {
+
+    const navigate = useNavigate();
+    const postRegi = () => {
+        navigate('/')
+    }
     return (
         <div className='regi-wrap'>
             <div className='regi-content'>
@@ -33,7 +39,7 @@ const Registration = () => {
                 </select>
             </div>
             <div className='regi-btn-wrap'>
-                <button className='regi-btn'>등록</button>
+                <button className='regi-btn' onClick={postRegi}>등록</button>
             </div>
 
         </div>
