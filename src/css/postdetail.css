@@ -11,4 +11,40 @@
     border: 1.5px solid grey;
     border-radius: 4px;
     padding: 30px;
+    margin-top: 50px
+}
+
+.detail-line2 {
+    margin: 0 auto;
+    width: 1000px;
+    height: 700px;
+    border: 1.5px solid grey;
+    border-radius: 4px;
+    padding: 30px;
+    margin-top: 50px;
+    display: flex;
+}
+
+.detail-img-line {
+    width: 400px;
+    height: 700px;
+    line-height: 700px;
+}
+
+.detail-img-line img {
+    vertical-align: middle;
+}
+
+.detail-card-wrap {
+    width: 300px;
+    margin: 150px;
+}
+
+.detail-card-wrap h1 {
+    height: 50px;
+    border-bottom: 1.5px solid grey;
+}
+
+.detail-content {
+    font-size: 20px;
 }
