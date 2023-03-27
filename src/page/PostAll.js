@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import Card from '../component/board/Card';
 import Pagination from '../component/board/Pagination';
 import Search from '../component/board/Search';
@@ -15,9 +15,12 @@ const PostAll = () => {
     /** 첫 게시물 위치 */
     const offset = (page - 1) * limit;
 
+    const [query, setQuery] = useSearchParams();
+
     /** API 호출(데이터) */
     const getPosts = async () => {
-        let url = "http://localhost:5000/card";
+        let searchQuery = query.get("q") || " ";
+        let url = `http://localhost:5000/card?q=${searchQuery}`;
         let response = await fetch(url);
         let data = await response.json();
         setPostList(data);
@@ -25,22 +28,11 @@ const PostAll = () => {
 
     useEffect(() => {
         getPosts();
-    }, []);
-
-    const [search, setSearch] = useState("");
-    const handleChange = (e) => {
-        console.log(e.target.value)
-        /** input value 값에 저장된 검색어 가져오기 */
-        e.preventDefault();
-        setSearch(e.target.value);
-    }
-
-
+    }, [query]);
 
     return (
         <div>
             <Search
-                onChange={handleChange}
             />
             <div className='card-wrap'>
                 <label className='card-limit-sel'>

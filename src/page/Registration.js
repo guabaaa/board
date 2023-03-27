@@ -1,15 +1,43 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import '../css/registration.css'
 
 const Registration = () => {
 
-    const navigate = useNavigate();
-    const postRegi = () => {
-        navigate('/')
+    const ImageUpload = ({ preview_URL, setImage }) => {
+        let inputRef;
+
+        const saveImage = (e) => {
+            e.preventDefault();
+            const fileReader = new FileReader();
+            if (e.target.files[0]) {
+                fileReader.readdAsDataURL(e.target.files[0]);
+            }
+            fileReader.onload = () => {
+                setImage({
+                    image_file: e.target.files[0],
+                    preview_URL: fileReader.result,
+                })
+            }
+        }
     }
     return (
         <div className='regi-wrap'>
+            <div className='regi-content'>
+                <input
+                    type={'file'}
+                    accept="image/*"
+                    onChange={saveImage}
+                    ref={(refParam) => (inputRef = refParam)}
+                    style={{ display: "none" }}
+                />
+            </div>
+            <div className='regi-content-imgwrap'>
+                <div className='regi-cimg'>
+                    <img src={preview_URL} />
+                </div>
+                <button onClick={() => inputRef.click()}>사진 올리기</button>
+            </div>
             <div className='regi-content'>
                 <span>고객사 : </span>
                 <input type='text' placeholder='고객사를 입력해주세요' />
@@ -39,7 +67,7 @@ const Registration = () => {
                 </select>
             </div>
             <div className='regi-btn-wrap'>
-                <button className='regi-btn' onClick={postRegi}>등록</button>
+                <button className='regi-btn' onClick={postRegi} type={'Submit'}>등록</button>
             </div>
 
         </div>
