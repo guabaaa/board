@@ -4,6 +4,7 @@ import '../../css/header.css'
 import { useNavigate } from 'react-router-dom'
 
 const Logo = () => {
+    /** 로고 클릭 시 메인 페이지로 이동 */
     const navigate = useNavigate();
 
     const goToMain = () => {

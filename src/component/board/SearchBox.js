@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import SearchDetail from '../page/SearchDetail';
-import Search from './navigation/Search';
+import SearchDetail from '../../page/SearchDetail';
+import Search from './Search';
 
 const SearchBox = () => {
 
