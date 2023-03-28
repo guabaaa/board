@@ -1,4 +1,3 @@
-
 import { useLocation } from 'react-router-dom'
 import '../../css/postdetail.css'
 
@@ -6,7 +5,6 @@ import '../../css/postdetail.css'
 
 const CardDetail = () => {
     const { state } = useLocation();
-
 
     return (
         <div className='detail-line2'>

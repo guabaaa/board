@@ -5,6 +5,7 @@ import { Routes, Route, Link } from "react-router-dom"
 import PostDetail from './page/PostDetail'
 import Registration from './page/Registration'
 import FalseSearch from './page/FalseSearch'
+import SearchDetail from './page/SearchDetail'
 
 const Board = () => {
     return (
@@ -12,7 +13,7 @@ const Board = () => {
             <Header />
             <Routes>
                 <Route path="/" element={<PostAll />} >
-                    <Route path=":q" element={<PostAll />} />
+                    <Route path=':q' element={<SearchDetail />} />
                 </Route>
                 <Route path="/post/:id" element={<PostDetail />} />
                 <Route path='/regi' element={<Registration />} />

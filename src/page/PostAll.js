@@ -22,16 +22,14 @@ const PostAll = () => {
     const [data, setData] = useState(null);
     console.log(q)
     // /** Api 호출 */
-    // const action = async () => {
-    //     const response = await Api.getBoardList({ title: params?.q || "" });
-    //     console.log(params)
-    //     setData(response);
-    // };
-    // useEffect(() => {
-    //     action();
-    // }, [params]);
-
-    /** search bar */
+    const action = async () => {
+        const response = await Api.getBoardList({ title: q || "" });
+        console.log(q)
+        setData(response);
+    };
+    useEffect(() => {
+        action();
+    }, [q]);
 
 
     return (
