@@ -9,14 +9,14 @@ const Search = () => {
     const navigate = useNavigate();
 
     const search = (e) => {
-        if (e.key) {
+        if (e.key === "Enter") {
             // 입력한 검색어를 읽어와서
             let keyword = e.target.value;
             // url 을 바꿔준다.
-            navigate(`/?q=${keyword}`)
+            navigate(`?q=${keyword}`)
             /** 검색한 키워드가 없으면 없다는 페이지 뜸 */
-            if (e.key = "null") {
-                navigate(`/falsesearch/?q=${keyword}`)
+            if (e.key == "null") {
+                navigate(`?q=${keyword}`)
             }
         }
 

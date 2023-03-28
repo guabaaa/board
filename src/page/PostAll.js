@@ -1,13 +1,12 @@
-import React, { useEffect, useState } from 'react'
-import { useNavigate, useSearchParams } from 'react-router-dom';
-import Card from '../component/board/Card';
-import Pagination from '../component/board/Pagination';
-import Search from '../component/board/Search';
-import Regibtn from '../component/navigation/Regibtn';
-
+import React, { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import Card from "../component/board/Card";
+import Pagination from "../component/board/Pagination";
+import Search from "../component/board/Search";
+import Regibtn from "../component/navigation/Regibtn";
+import Api from "../config/Api";
 
 const PostAll = () => {
-    const [PostList, setPostList] = useState([]);
     /** 현재 페이지 번호 */
     const [limit, setLimit] = useState(3);
     /** 페이지 당 게시물 수 */
@@ -15,30 +14,47 @@ const PostAll = () => {
     /** 첫 게시물 위치 */
     const offset = (page - 1) * limit;
 
-    const [query, setQuery] = useSearchParams();
+    const { q } = useParams();
 
-    /** API 호출(데이터) */
+    /**
+     *  post list
+     */
+    const [data, setData] = useState(null);
+    console.log(q)
+    // /** Api 호출 */
+    // const action = async () => {
+    //     const response = await Api.getBoardList({ title: params?.q || "" });
+    //     console.log(params)
+    //     setData(response);
+    // };
+    // useEffect(() => {
+    //     action();
+    // }, [params]);
+
+    /** search bar */
 
 
     return (
         <div>
-            <Search
-            />
-            <div className='card-wrap'>
-                <label className='card-limit-sel'>
+
+            <Search />
+            <div className="card-wrap">
+                <label className="card-limit-sel">
                     <select
                         type="number"
                         value={limit}
                         onChange={({ target: { value } }) => setLimit(Number(value))}
                     >
-                        <option value='3'>3개씩 보기</option>
-                        <option value='6'>6개씩 보기</option>
-                        <option value='9'>9개씩 보기</option>
-                        <option value='12'>12개씩 보기</option>
+                        <option value="3">3개씩 보기</option>
+                        <option value="6">6개씩 보기</option>
+                        <option value="9">9개씩 보기</option>
+                        <option value="12">12개씩 보기</option>
+                        <option value="50">50개씩 보기</option>
+                        <option value="100">100개씩 보기</option>
                     </select>
                 </label>
-                <div className='cardall-wrap'>
-                    {PostList.slice(offset, offset + limit).map((menu) => (
+                <div className="cardall-wrap">
+                    {data?.slice(offset, offset + limit).map((menu) => (
                         <Card item={menu} />
                     ))}
                 </div>
@@ -48,16 +64,14 @@ const PostAll = () => {
 
             <div>
                 <Pagination
-                    total={PostList.length}
+                    total={!data || data?.length}
                     limit={limit}
                     page={page}
                     setPage={setPage}
                 />
             </div>
         </div>
+    );
+};
 
-
-    )
-}
-
-export default PostAll
+export default PostAll;
