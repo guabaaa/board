@@ -18,17 +18,7 @@ const PostAll = () => {
     const [query, setQuery] = useSearchParams();
 
     /** API 호출(데이터) */
-    const getPosts = async () => {
-        let searchQuery = query.get("q") || " ";
-        let url = `http://localhost:5000/card?q=${searchQuery}`;
-        let response = await fetch(url);
-        let data = await response.json();
-        setPostList(data);
-    };
 
-    useEffect(() => {
-        getPosts();
-    }, [query]);
 
     return (
         <div>
